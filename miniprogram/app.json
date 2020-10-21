@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/home/index/index",
+    "pages/home/article/article",
+    "pages/home/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "博客",
+    "navigationBarTextStyle":"black"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

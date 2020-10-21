@@ -1,0 +1,213 @@
+page {
+  background-image: var(--gradualBlue);
+  width: 100vw;
+  /* overflow: hidden; */
+}
+
+/* 标题 */
+.title {
+  font-size: 40rpx;
+  font-weight: bold;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 作者信息 */
+.author {
+  margin-left: 5%;
+  margin-top: 10rpx;
+}
+
+/* 显示抽屉按钮 */
+.show-img-btn {
+  width: 50rpx;
+  height: 100rpx;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  margin-top: -50rpx;
+  font-size: 50rpx;
+  text-align: center;
+  border-top-right-radius: 70%;
+  border-bottom-right-radius: 70%;
+  background: #f1f1f1;
+  line-height: 100rpx;
+  opacity: 0.9;
+  z-index: 1000;
+}
+
+/* 关闭抽屉按钮 */
+.close-img-btn {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  top: 50%;
+  right: 20rpx;
+  margin-top: -50rpx;
+  font-size: 50rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  background: #f1f1f1;
+  line-height: 100rpx;
+  opacity: 0.9;
+  z-index: 1000;
+  transition: all 0.4s;
+}
+
+/* 返回顶部按钮 */
+.back-top {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  background: #8c8c8c;
+  position: fixed;
+  left: 85%;
+  margin-left: -35rpx;
+  top: 90%;
+  margin-top: -35rpx;
+  text-align: center;
+  line-height: 70rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: white;
+  opacity: 0.8;
+  transition: all 0.4s;
+}
+
+.DrawerPage {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0vw;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+.DrawerPage.show {
+  transform: scale(0.9, 0.9);
+  left: 85vw;
+  box-shadow: 0 0 60rpx rgba(0, 0, 0, 0.2);
+  transform-origin: 0;
+}
+
+.DrawerWindow {
+  position: absolute;
+  width: 85vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transform: scale(0.9, 0.9) translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.DrawerWindow.show {
+  transform: scale(1, 1) translateX(0%);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* 图片列表 */
+.articly-img {
+  width: 100%;
+  margin: 10rpx 0;
+  border-radius: 10rpx;
+  border: 2rpx solid #ececec;
+}
+
+/* 文字内容最外层容器 */
+.wrap {
+  width: 90%;
+  margin: 40rpx auto 40rpx;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  /*设置文本可以选中*/
+}
+
+/* h2标签样式 */
+.h2 {
+  border-bottom: 1rpx solid #eeeeee;
+  margin: 30rpx 0;
+  padding: 10rpx 0;
+}
+
+/* img标签样式 */
+.img {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+/* table标签样式 */
+.table {
+  width: 100%;
+  font-family: verdana, arial, sans-serif;
+  font-size: 100%;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  word-wrap: break-word;
+  border: 1px solid #dfe2e5;
+}
+
+/* td标签样式 */
+.td {
+  border: 1px solid #dfe2e5;
+}
+
+/* th标签样式 */
+.th {
+  border: 1px solid #dfe2e5;
+  background: #f8f8f8;
+}
+
+/* p标签下的code标签的样式 */
+.p > .code {
+  color: #333333;
+  background: #f3f4f4;
+  font-size: 90%;
+  padding: 3rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #e7eaed;
+}
+
+/* pre标签的样式 */
+.pre {
+  display: block;
+  color: #333333;
+  background: #f8f8f8;
+  border: 1rpx solid #e7eaed;
+  border-radius: 10rpx;
+  padding: 0 15rpx 30rpx;
+  font-size: 28.8rpx;
+  margin: 10rpx auto;
+  padding: 20rpx;
+  overflow: auto;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+}
+
+/* code标签样式 */
+.code {
+  padding: 20rpx;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+  word-spacing:5rpx;
+  line-height:40rpx;
+}
+
+/* p标签样式 */
+.p {
+  margin: 10rpx 0;
+  word-spacing: 5rpx;
+  letter-spacing: 3rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+}

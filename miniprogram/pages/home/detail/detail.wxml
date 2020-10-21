@@ -1,0 +1,41 @@
+<!-- 内容滚动区域 -->
+<scroll-view scroll-y scroll-top="{{scrollTop}}" class="DrawerPage {{modalName=='viewModal'?'show':''}}"
+  bindtap="hideModal" bindscroll="handleScroll">
+
+  <!-- 标题 -->
+  <view class="title">{{title}}</view>
+
+  <!-- 作者日期信息 -->
+  <view class="cu-capsule round author" wx:if="{{isLoad}}">
+    <view class="cu-tag">
+      {{author}}
+    </view>
+    <view class="cu-tag">
+      {{createdTime}}
+    </view>
+  </view>
+
+  <!-- 显示抽屉按钮 -->
+  <view class="show-img-btn cuIcon-right" catchtap="showModal" data-target="viewModal" wx:if="{{showImgBtn}}"></view>
+
+  <!-- 展示内容的富文本标签 -->
+  <rich-text style="width:100%;-webkit-user-select: text;user-select:text" nodes="{{node}}" selectable='true'></rich-text>
+
+  <!-- 底部加载状态 -->
+  <view class="cu-load bg-white {{!isLoad?'loading':'over'}}"></view>
+
+  <!-- 回到顶部按钮 -->
+  <view class="back-top cuIcon-top" catchtap="goTop" wx:if="{{goTopBtnShow}}"></view>
+</scroll-view>
+
+<!-- 隐藏抽屉按钮 -->
+<view class="close-img-btn cuIcon-back" bindtap="hideModal" wx:if="{{modalName=='viewModal'&&isLoad}}"></view>
+
+<!-- 左侧抽屉区域 -->
+<scroll-view scroll-y class="DrawerWindow {{modalName=='viewModal'?'show':''}}">
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+    <view class="cu-item" wx:for="{{imageArray}}" wx:key="index">
+      <image mode="aspectFill" class="articly-img" src="{{item}}" data-index="{{index}}" bindtap="previewImage"></image>
+    </view>
+  </view>
+</scroll-view>
